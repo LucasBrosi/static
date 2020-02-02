@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage ('Upload ti AWS.') {
+    stage ('Upload to AWS.') {
       steps {
         sh 'echo "Hello World"'
         sh '''

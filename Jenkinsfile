@@ -10,7 +10,7 @@ pipeline {
     }    
     stage ('Upload to AWS') {
       steps {
-        withAWSCli(credentials: 'AWS_Jenkins', region: 'us-east-2') {
+        withAWS(credentials: 'AWS_Jenkins', region: 'us-east-2') {
           sh 'aws s3 ls'
           s3Upload(file:'index.html', bucket:'udacity-lucasb-jenkins01', path:'index.html')
         }
